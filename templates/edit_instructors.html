@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Instructor</title>
+    <link rel="stylesheet" href="../css/styles_edit_instructors.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Edit Instructor Details</h1>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Success Message -->
+        <div id="success-message" class="success-message" style="display: none;">
+            <p>Instructor details updated successfully!</p>
+        </div>
+
+        <section class="form-section">
+            <h2>Update Instructor Information</h2>
+            <form action="/update-instructor" method="POST">
+                <div class="form-group">
+                    <label for="instructor-id">Instructor ID <span class="required">*</span></label>
+                    <input type="text" id="instructor-id" name="instructor-id" value="101" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-first-name">First Name <span class="required">*</span></label>
+                    <input type="text" id="instructor-first-name" name="first-name" value="John" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-last-name">Last Name <span class="required">*</span></label>
+                    <input type="text" id="instructor-last-name" name="last-name" value="Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-email">Email <span class="required">*</span></label>
+                    <input type="email" id="instructor-email" name="email" value="john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="instructor-phone" name="phone" value="123-456-7890" required>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-students">List of Students</label>
+                    <textarea id="instructor-students" name="students" rows="5">Student1, Student2, Student3</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructor-sections">List of Sections</label>
+                    <textarea id="instructor-sections" name="sections" rows="5">Section1, Section2</textarea>
+                </div>
+                <button type="submit" class="btn">Update Instructor</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

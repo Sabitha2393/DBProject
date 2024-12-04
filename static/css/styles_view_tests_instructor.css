@@ -1,0 +1,103 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container Styles */
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Tests List Styles */
+.tests-list {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tests-list h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tests-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tests-list th, .tests-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tests-list th {
+    background-color: #007bff;
+    color: white;
+}
+
+.tests-list td a {
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.tests-list td a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .tests-list {
+        padding: 20px;
+    }
+}

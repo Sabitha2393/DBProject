@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests - Student Dashboard</title>
+    <link rel="stylesheet" href="../css/styles_view_tests.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Tests - Student Dashboard</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- View Submitted Tests -->
+        <section class="view-submitted-tests">
+            <h3>View Submitted Tests</h3>
+            <ul>
+                <li>Test 1: Programming Concepts - Passed</li>
+                <li>Test 2: Database Management - Pending</li>
+                <li>Test 3: Web Development - Not Attempted</li>
+            </ul>
+        </section>
+
+        <!-- New Test Submission -->
+        <section class="new-test-submission">
+            <h3>Submit New Test</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="test-name">Test Name:</label>
+                    <input type="text" id="test-name" name="test-name" placeholder="Enter Test Name" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="test-file">Upload Test File:</label>
+                    <input type="file" id="test-file" name="test-file" accept=".pdf,.doc,.docx,.pptx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comments (optional):</label>
+                    <textarea id="comments" name="comments" placeholder="Any comments?" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Submit Test</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Future enhancements for dynamic content (e.g., displaying real tests) can go here.
+    </script>
+</body>
+</html>

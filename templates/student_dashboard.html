@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../css/styles_student_dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Student Dashboard</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Welcome Message -->
+        <section class="welcome-message">
+            <h2>Welcome!</h2>
+            <p>Here's an overview of your academic progress.</p>
+        </section>
+
+        <!-- Enrolled Courses -->
+        <section class="enrolled-courses">
+            <h3>Enrolled Courses</h3>
+            <ul>
+                <li><a href="intro_programming.html" class="course-link">Introduction to Programming</a></li>
+                <li><a href="db_management_course.html" class="course-link">Database Management</a></li>
+                <li><a href="web_development_course.html" class="course-link">Web Development</a></li>
+            </ul>
+        </section>
+
+        <!-- List of Sections -->
+        <section class="sections">
+            <h3>List of Sections</h3>
+            <ul>
+                <li>Section A: Programming Fundamentals</li>
+                <li>Section B: Database Design</li>
+                <li>Section C: Frontend Web Development</li>
+            </ul>
+        </section>
+
+        <!-- Grade -->
+        <section class="grade">
+            <h3>Grade</h3>
+            <p>A+</p>
+        </section>
+
+        <!-- Submitted Assignments -->
+        <section class="assignments">
+            <h3>Assignments</h3>
+            
+            <a href="view_assignments.html"class="btn">View Assignments</a>
+        </section>
+
+        <!-- Submitted Tests -->
+        <section class="tests">
+            <h3>Tests</h3>
+            
+            <a href="view_tests.html" class="btn">View Tests</a>
+        </section>
+    </div>
+
+    <script>
+        // Replace this with the actual username from your session or database
+        const studentName = "John Doe"; // Example name
+        document.getElementById('student-name').textContent = studentName;
+    </script>
+</body>
+</html>

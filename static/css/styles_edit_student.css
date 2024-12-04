@@ -1,0 +1,144 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container and Section Styles */
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 900px; /* Increased width for more space */
+}
+
+.section {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Section Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #fff; /* Changed label color to white */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* Full width for form fields */
+    max-width: 700px; /* Increased max width for more spacious fields */
+    padding: 14px; /* Increased padding for a more prominent look */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+}

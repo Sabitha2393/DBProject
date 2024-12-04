@@ -1,0 +1,93 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+}
+
+/* Login Container Styles */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    font-style: bold;
+    background-size: auto;
+    background-color: bisque;
+}
+
+/* .login-container #login-container-field {
+    font: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: #fff;
+    
+} */
+
+/* Heading Styles */
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Role Selection Styles */
+.role-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.role-selection button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.role-selection button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.role-selection button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .role-selection button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

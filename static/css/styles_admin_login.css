@@ -1,0 +1,143 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Login Container Styles */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+}
+
+/* Heading Styles */
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button Styles */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Admin Login Specific Styles */
+.admin-login {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.admin-login .btn {
+    background-color: #343a40;
+}
+
+.admin-login .btn:hover {
+    background-color: #212529;
+}
+
+/* Student Login Specific Styles */
+.student-login {
+    background: linear-gradient(135deg, #e2eafc, #dbe2ff);
+}
+
+.student-login .btn {
+    background-color: #28a745;
+}
+
+.student-login .btn:hover {
+    background-color: #218838;
+}
+
+/* Instructor Login Specific Styles */
+.instructor-login {
+    background: linear-gradient(135deg, #ffe9e9, #fbd5d5);
+}
+
+.instructor-login .btn {
+    background-color: #ffc107;
+}
+
+.instructor-login .btn:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

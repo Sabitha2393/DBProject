@@ -1,0 +1,256 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container and Section Styles */
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* General Section Styles */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Instructor Info Section */
+.instructor-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.instructor-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sections List */
+.sections h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sections ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sections ul li {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Students List */
+.students h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.students ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.students ul li {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Upload Course Materials Section */
+.upload-materials h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.upload-materials form {
+    display: flex;
+    align-items: center;
+}
+
+.upload-materials input[type="file"] {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.upload-materials .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.upload-materials .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Create Assignment Section */
+.assignments h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.assignments .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.assignments .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Create Test Section */
+.tests h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tests .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.tests .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* New Sections for View Submitted Assignments and Grade Assignment */
+.view-submitted-assignments, .grade-assignment, .view-submitted-tests, .grade-test {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.view-submitted-assignments h3, .grade-assignment h3, .view-submitted-tests h3, .grade-test h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.view-submitted-assignments a, .grade-assignment a, .view-submitted-tests a, .grade-test a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color: #007bff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.view-submitted-assignments a:hover, .grade-assignment a:hover, .view-submitted-tests a:hover, .grade-test a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Additional button styling for links */
+a.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+

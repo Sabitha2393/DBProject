@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+    <link rel="stylesheet" href="../css/styles_view_students.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>View Students</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2>All Students</h2>
+        
+        <!-- Table to display students -->
+        <table class="table" aria-label="Students Table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>
+                        <div class="actions">
+                            <a href="edit_student.html" class="btn">Edit</a>
+                            <button class="btn delete" aria-label="Delete John Doe">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>
+                        <div class="actions">
+                            <button class="btn" aria-label="Edit Jane Smith">Edit</button>
+                            <button class="btn delete" aria-label="Delete Jane Smith">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container and Section Styles */
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* General Section Styles */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Overview Section */
+.course-overview h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.course-overview p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Course Modules Section */
+.course-modules h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.course-modules ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-modules ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.course-modules ul li strong {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.course-modules ul li p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}

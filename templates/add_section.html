@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Section</title>
+    <link rel="stylesheet" href="../css/styles_add_section.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Add New Section</h1>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Success Message -->
+        <div id="success-message" class="success-message" style="display: none;">
+            <p>Section added successfully!</p>
+        </div>
+
+        <section class="form-section">
+            <h2>Add Section Details</h2>
+            <form action="/add-section" method="POST">
+                <!-- Section ID -->
+                <div class="form-group">
+                    <label for="section-id">Section ID</label>
+                    <input type="text" id="section-id" name="section-id" value="Auto-Generated" readonly>
+                </div>
+
+                <!-- Course ID -->
+                <div class="form-group">
+                    <label for="course-id">Course ID <span class="required">*</span></label>
+                    <input type="text" id="course-id" name="course-id" required>
+                </div>
+
+                <!-- Instructor Name -->
+                <div class="form-group">
+                    <label for="instructor-name">Instructor Name <span class="required">*</span></label>
+                    <input type="text" id="instructor-name" name="instructor-name" required>
+                </div>
+
+               
+                <!-- Enrollment Start Date -->
+                <div class="form-group">
+                    <label for="enrollment-start-date">Enrollment Start Date <span class="required">*</span></label>
+                    <input type="date" id="enrollment-start-date" name="enrollment-start-date" required>
+                </div>
+
+                <!-- Enrollment End Date -->
+                <div class="form-group">
+                    <label for="enrollment-end-date">Enrollment End Date <span class="required">*</span></label>
+                    <input type="date" id="enrollment-end-date" name="enrollment-end-date" required>
+                </div>
+
+                <!-- List of Students -->
+                <div class="form-group">
+                    <label for="students-list">List of Students <span class="required">*</span></label>
+                    <textarea id="students-list" name="students-list" rows="5" placeholder="Enter student IDs separated by commas (e.g., 101, 102, 103)" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Add Section</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Check URL for "status=success"
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'success') {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

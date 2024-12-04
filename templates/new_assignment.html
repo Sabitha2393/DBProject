@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Assignment</title>
+    <link rel="stylesheet" href="../css/styles_new_assignment.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Create New Assignment</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- New Assignment Form -->
+        <section class="new-assignment">
+            <h2>New Assignment Details</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="assignment-title">Assignment Title:</label>
+                    <input type="text" id="assignment-title" name="assignment-title" placeholder="Enter Assignment Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="assignment-description">Description:</label>
+                    <textarea id="assignment-description" name="assignment-description" rows="4" placeholder="Enter Assignment Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="assignment-file">Attach File:</label>
+                    <input type="file" id="assignment-file" name="assignment-file">
+                </div>
+                <button type="submit" class="btn">Create Assignment</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Add any dynamic behavior if needed (e.g., form validation, etc.)
+    </script>
+</body>
+</html>
