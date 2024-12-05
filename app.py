@@ -123,12 +123,36 @@ def add_student():
     # Render the student addition form
     return render_template('add_students.html')
 
+@app.route('/add_instructor', methods=['GET', 'POST'])
+def add_instructor():
+    if request.method == 'POST':
+        # Get form data
+        instructor_id = request.form['instructor-id']
+        fname = request.form['first-name']
+        lname = request.form['last-name']
+        email = request.form['email']
+        phone = request.form['phone']
+        password = request.form['password']
+        cofirm_password = request.form['confirm-password']
+        if password != cofirm_password:
+            flash("Passwords do not match!", "danger")
+            return redirect(url_for('add_instructor'))
+        
+        data_model.insert_instructor(instructor_id, fname, lname, email, phone, generate_password_hash(password))
+
+        # Flash success message and redirect
+        flash("Instructor added successfully!", "success")
+        return redirect(url_for('add_instructor'))
+
+    # Render the instructor addition form
+    return render_template('add_instructor.html')
+
 @app.route('/add_section', methods=['GET', 'POST'])
 def add_section():
     courses = list(data_model.get_courses())
     instructors = list(data_model.get_instructors())
     if request.method == 'POST':
-        section_id = str(uuid.uuid4())
+        section_id = request.form['section-id']
         course_id = request.form['course-id']
         instructor = request.form['instructor-name']
         start_date = request.form['start-date']
@@ -163,6 +187,16 @@ def create_assignment():
 def view_students():
     students = list(data_model.get_students())
     return render_template('view_students.html', students=students)
+
+@app.route('/view_sections', methods=['GET', 'POST'])
+def view_sections():
+    sections = list(data_model.get_sections())
+    return render_template('view_sections.html', sections=sections)
+
+@app.route('/view_instructors', methods=['GET', 'POST'])
+def view_instructors():
+    instructors = list(data_model.get_instructors())
+    return render_template('view_instructors.html', instructors=instructors)
 
 @app.route('/add_students', methods=['GET', 'POST'])
 def add_students():

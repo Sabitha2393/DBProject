@@ -51,8 +51,9 @@ class DataModel:
         self.db.student.insert_one(student)
         return jsonify(message="Student Record created successfully"), 201
 
-    def insert_instructor(self, first_name, last_name, email, phone_number, password):
+    def insert_instructor(self, instructor_id, first_name, last_name, email, phone_number, password):
         instructor = {
+            "instructor_id": instructor_id,
             "first_name": first_name,
             "last_name": last_name,
             "email": email,
@@ -140,6 +141,9 @@ class DataModel:
     
     def get_students(self):
         return self.db.student.find({}, {"_id": 0, "first_name": 1, "last_name": 1, "email": 1, "phone_number": 1})
+    
+    def get_sections(self):
+        return self.db.section.find({}, {"_id": 0, "section_id": 1, "course_id": 1, "instructor_name": 1, "enrollment_start_date": 1, "enrollment_end_date": 1})
     
     def get_instructors(self):
         return self.db.instructor.find({}, {"_id": 0, "first_name": 1, "last_name": 1, "email": 1, "phone_number": 1})
