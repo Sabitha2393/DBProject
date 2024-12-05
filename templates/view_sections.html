@@ -21,22 +21,18 @@
                         <th>Section ID</th>
                         <th>Course ID</th>
                         <th>Instructor Name</th>
-                        <th>Enrollment Name</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Students</th>
+                        <th>Enrollment Start Date</th>
+                        <th>Enrollment End Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for section in sections %}
+                    {% for sec in sections %}
                     <tr>
-                        <td>101</td>
-                        <td>CSE202</td>
-                        <td>Dr. Smith</td>
-                        <td>Spring 2024</td>
-                        <td>2024-01-10</td>
-                        <td>2024-05-15</td>
-                        <td>John, Alice, Bob</td>
+                       <td>{{ sec.section_id }}</td>
+                       <td>{{ sec.course_id }}</td>
+                       <td>{{ sec.instructor_name }}</td>
+                       <td>{{ sec.enrollment_start_date }}</td>
+                       <td>{{ sec.enrollment_end_date }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

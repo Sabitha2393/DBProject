@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Instructors</title>
-    <link rel="stylesheet" href="../css/styles_view_instructors.css">
+    <link rel="stylesheet" href="../static/css/styles_view_instructors.css">
 </head>
 <body>
     <header>
@@ -18,37 +18,21 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Instructor ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Phone</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% for instructor in instructors %}
                     <tr>
-                        <td>101</td>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john.doe@example.com</td>
-                        <td>123-456-7890</td>
-                        <td>
-                            <button class="btn edit-btn">Edit</button>
-                            <button class="btn delete-btn">Delete</button>
-                        </td>
+                        <td>{{ instructor.first_name }}</td>
+                        <td>{{ instructor.last_name }}</td>
+                        <td>{{ instructor.email }}</td>
+                        <td>{{ instructor.phone_number }}</td>
                     </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Jane</td>
-                        <td>Smith</td>
-                        <td>jane.smith@example.com</td>
-                        <td>987-654-3210</td>
-                        <td>
-                            <button class="btn edit-btn">Edit</button>
-                            <button class="btn delete-btn">Delete</button>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </section>
