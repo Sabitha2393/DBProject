@@ -86,11 +86,12 @@ class DataModel:
         self.db.assignment.insert_one(assignment)
         return jsonify(message="Assignment Record created successfully"), 201
     
-    def insert_test(self, test_id, section_id, title, duration, due_date, total_questions, max_attempts):
+    def insert_test(self, test_id, section_id, title, description, duration, due_date, total_questions, max_attempts):
         test = {
             "test_id": test_id,
             "section_id": section_id,
             "title": title,
+            "description": description,
             "duration": duration,
             "due_date": due_date,
             "total_questions": total_questions,
@@ -147,3 +148,6 @@ class DataModel:
     
     def get_instructors(self):
         return self.db.instructor.find({}, {"_id": 0, "first_name": 1, "last_name": 1, "email": 1, "phone_number": 1})
+    
+    def get_tests(self):
+        return self.db.test.find({}, {"_id": 0, "test_id": 1, "section_id": 1, "title": 1, "description": 1, "duration": 1, "due_date": 1, "total_questions": 1, "max_attempts": 1})

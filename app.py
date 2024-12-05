@@ -53,7 +53,8 @@ def student_dashboard():
 def instructor_dashboard():
     courses = list(data_model.get_courses())
     assignments = list(data_model.get_assignments())
-    return render_template('instructor_dashboard.html', courses=courses, assignments=assignments)
+    tests = list(data_model.get_tests())
+    return render_template('instructor_dashboard.html', courses=courses, assignments=assignments, tests=tests)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -182,6 +183,25 @@ def create_assignment():
     # Render the assignment creation form
     return render_template('create_assignment.html')
 
+@app.route('/create_test', methods=['GET', 'POST'])
+def create_test():
+    if request.method == 'POST':
+        # Retrieve form data
+        test_id = request.form['test-id']
+        section_id = request.form['section-id']
+        title = request.form['test-title']
+        description = request.form['description']
+        duration = request.form['duration']
+        due_date = request.form['due-date']
+        total_question = int(request.form['total_questions'])
+        max_attempts = int(request.form['max_attempts'])
+
+        data_model.insert_test(test_id, section_id, title, description, duration, due_date, total_question, max_attempts) 
+        flash("Test created successfully!", "success")
+        return redirect(url_for('create_test'))
+
+    # Render the test creation form
+    return render_template('new_test.html')
 
 @app.route('/view_students', methods=['GET', 'POST'])
 def view_students():

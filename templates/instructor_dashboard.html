@@ -96,10 +96,28 @@
         </section>
 
         <!-- Create Tests -->
-        <!-- <section class="tests">
-            <h3>Create Test</h3>
-            <a href="new_test.html" class="btn">Create Test</a>
-        </section> -->
+        <section class="tests">
+            <h3>Tests</h3>
+            <div class="row">
+                {% for test in tests %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Test Name : </strong>{{ test.title }}</h5>
+                            <p class="card-text"><strong>Test ID : </strong> {{ test.test_id }}</p>
+                            <p class="card-text"><strong>Test Description : </strong> {{ test.description }}</p>
+                            <p class="card-text"><strong>Section ID : </strong> {{ test.section_id }}</p>
+                            <p class="card-text"><strong>Due Date : </strong> {{ test.due_date }}</p>
+                            <p class="card-text"><strong>Duration : </strong> {{ test.duration }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <p>No assignments found.</p>
+                {% endfor %}
+            </div>
+            <a href="{{ url_for('create_test') }}" class="btn">Create Test</a>
+        </section>
 
     </div>
 
