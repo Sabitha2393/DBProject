@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="../css/styles_view_students.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <h1>View Students</h1>
-        </div>
-    </header>
     <div class="container">
         <h2>All Students</h2>
         
@@ -21,30 +16,19 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Phone</th>
                 </tr>
             </thead>
             <tbody>
+                {% for student in students %}
                 <tr>
-                    <td>John Doe</td>
-                    <td>john.doe@example.com</td>
+                    <td> {{ student.first_name  + " " + student.last_name }}</td>
+                    <td>{{ student.email }}</td>
                     <td>
-                        <div class="actions">
-                            <a href="edit_student.html" class="btn">Edit</a>
-                            <button class="btn delete" aria-label="Delete John Doe">Delete</button>
-                        </div>
+                        {{ student.phone_number }}
                     </td>
                 </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>jane.smith@example.com</td>
-                    <td>
-                        <div class="actions">
-                            <button class="btn" aria-label="Edit Jane Smith">Edit</button>
-                            <button class="btn delete" aria-label="Delete Jane Smith">Delete</button>
-                        </div>
-                    </td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

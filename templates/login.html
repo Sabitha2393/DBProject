@@ -6,41 +6,28 @@
         <h1>E-Learning Management System</h1>
     </header>
 
- <div id="login-register">
-    <div class="tab-content">
+    <div class="login-container">
+        <form method="POST" action="/login" class="mt-4 p-4 border rounded">
         
-        <div class="login-container">
-            <form method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="loginName">Email</label>
+                <input type="email" id="loginName" name="email" class="form-control" />
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label" for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" class="form-control" />
+            </div>
             
-                <div id="login-container-field">
-                    <label class="form-label" for="loginName">Email</label>
-                    <input type="email" id="loginName" name="email" class="form-control" />
-                </div>
-        
-                <div id="login-container-field">
-                    <label class="form-label" for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" name="password" class="form-control" />
-                </div>
-                <div id="login-container-field">
-                    <label for="role">Role</label>
-                    <select name="role" id="role">
-                        <option value="patient">patient</option>
-                        <option value="doctor" >doctor</option>
-                        <option value="staff"> staff </option>
-                    </select>
-                    <br>
-                </div>
-                <br>
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
-                    {% if err %}
-                        <p> {{ err }}</p>
-                    {% endif %}
-                <div class="text-center">
-                    <p>Not a member? <a href="{{ url_for('index') }}">Register</a></p>
-                </div>
-            </form>
-        </div>
-        
+            <div><input type="hidden" name="user_type" value="{{ message }}">   </div>
+            <br>
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
+                {% if err %}
+                    <p> {{ err }}</p>
+                {% endif %}
+            <div class="text-center">
+                <p>Not a member? <a href="{{ url_for('register') }}">Register</a></p>
+            </div>
+        </form>
     </div>
-</div>
 {% endblock %}
