@@ -27,20 +27,18 @@ header {
 /* Login Container Styles */
 .login-container {
     display: flex;
-    justify-content: space-between;
     font-style: bold;
     background-size: auto;
-    background-color: bisque;
 }
 
-/* .login-container #login-container-field {
+.login-container #login-container-field {
     font: bold;
     display: flex;
     justify-content: space-between;
     padding: 5px;
     color: #fff;
-    
-} */
+   
+}
 
 /* Heading Styles */
 .login-container h2 {

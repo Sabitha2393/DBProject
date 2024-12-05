@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Section</title>
-    <link rel="stylesheet" href="../css/styles_add_section.css">
+    <link rel="stylesheet" href="../static/css/styles_add_section.css">
 </head>
 <body>
     <header>
@@ -17,10 +17,51 @@
         <div id="success-message" class="success-message" style="display: none;">
             <p>Section added successfully!</p>
         </div>
-
+        <section class="form-section">
+            <h2>Instructors</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Instructor Name</th>
+                    <th>Instructor Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for instructor in instructors %}
+                <tr>
+                    <td>{{ instructor.first_name + " " + instructor.last_name }} </td>
+                    <td>{{ instructor.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <section class="form-section">
+        <h2>Courses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.course_id }} </td>
+                <td>{{ course.title }}</td>
+                <td>{{ course.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
         <section class="form-section">
             <h2>Add Section Details</h2>
-            <form action="/add-section" method="POST">
+
+
+            <form action="/add_section" method="POST">
                 <!-- Section ID -->
                 <div class="form-group">
                     <label for="section-id">Section ID</label>
@@ -43,19 +84,13 @@
                 <!-- Enrollment Start Date -->
                 <div class="form-group">
                     <label for="enrollment-start-date">Enrollment Start Date <span class="required">*</span></label>
-                    <input type="date" id="enrollment-start-date" name="enrollment-start-date" required>
+                    <input type="date" id="enrollment-start-date" name="start-date" required>
                 </div>
 
                 <!-- Enrollment End Date -->
                 <div class="form-group">
                     <label for="enrollment-end-date">Enrollment End Date <span class="required">*</span></label>
-                    <input type="date" id="enrollment-end-date" name="enrollment-end-date" required>
-                </div>
-
-                <!-- List of Students -->
-                <div class="form-group">
-                    <label for="students-list">List of Students <span class="required">*</span></label>
-                    <textarea id="students-list" name="students-list" rows="5" placeholder="Enter student IDs separated by commas (e.g., 101, 102, 103)" required></textarea>
+                    <input type="date" id="enrollment-end-date" name="end-date" required>
                 </div>
 
                 <button type="submit" class="btn">Add Section</button>
